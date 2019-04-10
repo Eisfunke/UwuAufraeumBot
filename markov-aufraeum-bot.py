@@ -5,16 +5,16 @@
 from telegram.ext import Updater, RegexHandler
 import time
 
-TOKEN_FILE = "/etc/markov-aufraeum-bot/token.txt"
+TOKEN_FILE = "token"
 
-def deleteMarkovMessage(bot, update):
-	time.sleep(5)
-	bot.deleteMessage(chat_id=update.message.chat.id, message_id=update.message.message_id)
+def delete(bot, update):
+    time.sleep(10)
+    bot.deleteMessage(chat_id=update.message.chat.id, message_id=update.message.message_id)
 
 
 token = open(TOKEN_FILE, "r").read().rstrip()
 updater = Updater(token=token)
 
-updater.dispatcher.add_handler(RegexHandler('/markov', deleteMarkovMessage))
+updater.dispatcher.add_handler(RegexHandler('uwu|UWU|uWu|UwU|Uwu|uwU', delete))
 
 updater.start_polling()

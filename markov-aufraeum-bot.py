@@ -15,6 +15,6 @@ def delete(bot, update):
 token = open(TOKEN_FILE, "r").read().rstrip()
 updater = Updater(token=token)
 
-updater.dispatcher.add_handler(RegexHandler('uwu|UWU|uWu|UwU|Uwu|uwU', delete))
+updater.dispatcher.add_handler(RegexHandler('\buwu\b|\bUWU\b|\buWu\b|\bUwU\b|\bUwu\b|\buwU\b', delete))
 
 updater.start_polling()

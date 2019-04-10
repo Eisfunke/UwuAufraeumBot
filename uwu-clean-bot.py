@@ -10,7 +10,7 @@ TOKEN_FILE = "token"
 def delete(bot, update):
     time.sleep(2)
     bot.deleteMessage(chat_id=update.message.chat.id, message_id=update.message.message_id)
-    bot.sendMessage(chat_id=update.message.chat.id, text='An illegal uwu has been deleted here.')
+    bot.sendMessage(chat_id=update.message.chat.id, text='An illegal uwu by ' + update.message.from_user.name + ' has been deleted here.')
 
 
 token = open(TOKEN_FILE, "r").read().rstrip()

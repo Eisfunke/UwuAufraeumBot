@@ -1,3 +1,7 @@
+**Moved to <https://git.eisfunke.com/software/anti-uwu-bot-telegram>!**
+
+---
+
 Telegram-Bot, der illegale uwu-Nachrichten filtert.
 
 Es gibt ihn auf Telegram in zwei Varianten:
